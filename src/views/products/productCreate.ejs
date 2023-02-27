@@ -1,0 +1,56 @@
+<%- include('../partials/header.ejs') %>
+
+<form action="/product/create" method="post" enctype="multipart/form-data">
+    <label for="name">nombre:</label>
+    <input type="text" name="name">
+    
+    <br>
+    <br>
+    <br>
+    
+    <label for="decription">descripción:</label>
+    <textarea name="decription" id="" cols="30" rows="10"></textarea>
+   
+    <br>
+    <br>
+    <br>
+    
+    <label for="image">imágen:</label>
+    <input type="file" name="image" id="">
+    
+    <br>
+    <br>
+    <br>
+   
+    <label for="price">precio:</label>
+    <input type="number" name="price" id="">
+    
+    <br>
+    <br>
+    <br>
+    
+    <label for="category">categoría:</label>
+    <select name="category" id="">
+       <option value="man">man</option>
+       <option value="woman">woman</option> 
+    </select>
+   
+    <br>
+    <br>
+    <br>
+   
+    <label for="size">talla:</label>
+    <select name="size" id="">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+    </select>
+    
+    <br>
+    <br>
+    <br>
+
+    <button type="submit"> Enviar
+        
+    </button>
+</form>

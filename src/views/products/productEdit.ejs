@@ -1,0 +1,51 @@
+<%- include('../partials/header.ejs') %>
+
+
+<form action="/product/edit/<%= product.id %>?_method=put" method="post">
+    <label for="name">nombre:</label>
+    <input type="text" name="name" value="<%= product.name%>">
+    
+    <br>
+    
+    <label for="decription">descripción:</label>
+    <textarea  name="decription" id="" cols="30" rows="10"> <%= product.decription %></textarea>
+   
+    <br>
+    <br>
+    <br>
+
+    <!-- <label for="image">imágen:</label>
+    <input type="file" name="image" id=""> -->
+
+    <img src="/images/products/<%= product.image %>" alt="">
+    
+    <br>
+    <br>
+    <br>
+
+    <label for="price">precio:</label>
+    <input type="number" name="price" value="<%= product.price %>" id="">
+    
+    <br>
+    <br>
+    <br>
+    
+    <label for="category">categoría:</label>
+    <select name="category" id="">
+       <option value="man">man</option>
+       <option value="women">woman</option> 
+    </select>
+   
+    <br>
+    <br>
+    <br>
+   
+    <label for="size">talla:</label>
+    <select name="size" id="">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+    </select>
+
+    <button type="submit">Editar</button>
+</form>

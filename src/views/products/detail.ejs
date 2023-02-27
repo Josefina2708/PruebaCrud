@@ -1,0 +1,37 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>man</h1>
+
+<% for( let i = 0; i < products.length; i++ ) { %>
+
+    
+    <% if (products[i].category == "man") { %>
+        <a href="/product/catalogo/<%= products[i].id %>"><h3><%= products[i].name %></h3></a>
+        <img src="/images/products/<%= products[i].image %>" alt="<%= products[i].image %>">
+        <p><%= products[i].decription %></p>
+        <p><%=  products[i].price%></p>
+        <p><%=  products[i].size%></p>
+        <a href="/product/edit/<%= products[i].id %>">Editar</a>
+        <a href="/product/delete/<%= products[i].id %>">Eliminar</a>
+    <% } %>
+<% } %>
+
+<h1>woman</h1>
+
+<% products.forEach(product => { %>
+ <% if (product.category == "women") { %>
+  <a href="/product/catalogo/<%=product.id%>"><h3><%= product.name %></h3></a>
+  <img src="/images/products/<%=product.image%>">
+  <p><%= product.decription %></p>
+  <p><%= product.price %></p>
+  <p><%= product.size %></p>
+  <a href="/product/edit/<%= product.id %>">Editar</a>
+  <a href="/product/delete/<%= product.id %>">Eliminar</a>
+ <% } %>
+<% }) %>
+
+<style>
+    img {
+        width: 300px;
+    }
+</style>
